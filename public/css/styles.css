@@ -67,4 +67,6 @@
       font-size: 14px;
   }
 
- 
+ .side-image img{
+     height: 200px;
+ }
