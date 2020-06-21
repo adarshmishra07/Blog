@@ -1,0 +1,33 @@
+<h2 class="pt-2 text-primary">Dashboard</h4>
+<h6 class="pb-2">Welcome <span class="text-danger">{{name}}</span></h6>
+{{#if blogs}}
+    <table class="table-striped my-5" style="width: 100%;">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Posted on </th>
+                <th>Status</th>
+                <th >Edit / Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each blogs}}
+                <tr>
+                    <td><a href="/blogs/view/{{_id}}">{{title}}</a></td>
+                    <td>{{formatDate createdAt 'MMMM Do YYYY , h:mm:ss a'}}</td>
+                    <td><span class="status">{{status}}</span></td>
+                    <td style="display: flex;"><a href="blogs/edit/{{_id}}" class="btn text-success"><i class="fas fa-edit"></i></a>
+                    <form action="/blogs/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn text-primary "><i class="fas fa-trash"></i></button>
+                    </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+<p>You have not posted any Blog</p>
+
+{{/if}}
+

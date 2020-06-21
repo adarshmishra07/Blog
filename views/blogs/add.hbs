@@ -1,0 +1,28 @@
+<h3 class="mt-2 text-primary">Create a Blog</h3>
+<div class="row">
+    <form action="/blogs" method="POST" class="col s12">
+        <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+        </div>
+
+        <div class="form-group">
+            <label for="status">Status</label>
+                <select id="status" class="form-control" name="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>                
+        </div>
+
+        <div class="form-group">
+                <label for="body">Write your Blog</label>
+                <textarea id="body" class="ckeditor form-control" name="body"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-success">
+            <a href="/dashboard" class="btn btn-danger">Cancel</a>
+        </div>
+    </form>
+</div>

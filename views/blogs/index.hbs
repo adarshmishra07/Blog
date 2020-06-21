@@ -1,0 +1,23 @@
+<div class="row">
+    {{#each blogs}}
+    <div class="col-12 col-md-12 my-3">
+        <div class="card blogs border-primary">
+            <div class="card-header row justify-content-between align-items-center mx-0">
+                <h5 style="display: inline-block">{{title}}</h5>
+                <div class="chip" >
+                    <img src="{{user.image}}" width="70" height="70" alt="">
+                    {{user.displayName}}
+                </div>
+            </div>
+            <div class="card-body">
+                {{stripTags (truncate body 200)}}
+            </div>
+            <div class="card-footer center-align">
+                <a href="/blogs/view/{{_id}}" class="btn btn-primary">Read More</a>
+            </div>
+        </div> 
+    </div>
+    {{else}}
+       <p>No blogs posted yet!</p>
+    {{/each}}
+</div>

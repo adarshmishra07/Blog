@@ -1,0 +1,31 @@
+<h3 class="mt-2 text-primary">Edit Blog</h3>
+<div class="row">
+    <form action="/blogs/{{blog._id}}" method="POST" class="col s12">
+    <input type="hidden" name="_method" value="PUT">
+        <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{blog.title}}">
+        </div>
+
+        <div class="form-group">
+                <label for="title">Status</label>
+                <select id="status" class="form-control" name="status">
+                    {{#select blog.status}}
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                    {{/select}}
+                </select>
+        </div>
+
+        <div class="form-group">
+                <label for="body">Write your Blog</label>
+                <textarea id="body" class="ckeditor form-control" name="body">{{blog.body}}</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-success">
+            <a href="/dashboard" class="btn btn-danger">Cancel</a>
+        </div>
+    </form>
+</div>

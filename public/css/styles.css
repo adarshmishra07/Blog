@@ -1,0 +1,70 @@
+#login{
+    background-image: url("../images/bg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+.login-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login-tab{
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.403);
+}
+
+.goo i {
+    border-right: 1px solid white;
+    text-align: left;
+}
+
+.add-btn{
+    bottom: 30px;
+    right: 30px;
+    background-color: tomato;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.add-btn a i{
+    font-size: 30px;
+    color: white;
+    margin-top: 3px;
+}
+
+.status{
+    text-transform: capitalize;
+}
+.blogs{
+    min-height: 250px;
+}
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    border-radius: 25px;
+    background-color: tomato;
+    color: white;
+    
+  }
+  
+  .chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+
+  .timestamp{
+      font-size: 14px;
+  }
+
+ 
